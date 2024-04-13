@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Mes</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+<body>
+<div class="container mt-5">
+    <h1>Nombre del Mes</h1>
+    <form action="/mes/obtenerNombre" method="post">
+        <div class="form-group">
+            <label for="numero">Número de mes:</label>
+            <input type="number" class="form-control" id="numero" name="numero">
+        </div>
+        <button type="submit" class="btn btn-primary">Obtener Nombre del Mes</button>
+    </form>
+</div>
+
+<div class="container mt-5">
+    <h1>Resultado Nombre del Mes</h1>
+    <p>El nombre del mes es: <span th:text="${nombreMes}"></span></p>
+</div>
+
+
+</body>
+</html>
